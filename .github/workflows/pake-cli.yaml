@@ -162,7 +162,7 @@ jobs:
           if [ -n "${{ inputs.targets }}" ] && [ "${{ runner.os }}" == "Linux" ]; then
             ARGS+=("--targets" "${{ inputs.targets }}")
           fi
-
+          ARGS+=("--inject" "custom.css" "--show-system-tray")
           echo "Running: node dist/cli.js ${ARGS[@]}"
           node dist/cli.js "${ARGS[@]}"
 
@@ -208,7 +208,7 @@ jobs:
           if ("${{ inputs.new_window }}" -eq "true") {
             $args += "--new-window"
           }
-
+          $args += "--inject", "custom.css", "--show-system-tray"
           Write-Host "Running: node dist/cli.js $($args -join ' ')"
           node dist/cli.js $args
 
