@@ -1,0 +1,28 @@
+/* 1. 隐藏顶部导航条、登录按钮、Logo */
+header, .header, [class*="Header"], .nav-bar {
+    display: none !important;
+}
+
+/* 2. 隐藏页脚信息、友情链接、版权声明 */
+footer, .footer, [class*="Footer"] {
+    display: none !important;
+}
+
+/* 3. 隐藏 APP 下载横幅、浮动推广广告 */
+.app-download, [class*="download"], [class*="banner"], [class*="ad-"] {
+    display: none !important;
+}
+
+/* 4. 优化翻译主体区域居中与边距 */
+body {
+    background-color: #f7f8fa !important;
+    overflow-x: hidden !important;
+    padding-top: 10px !important;
+}
+
+main, .translate-container, [class*="Translate"] {
+    margin: 0 auto !important;
+    padding: 0 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
